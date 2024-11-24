@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <button onclick="createcard(2, 2, 2)" type="submit">Add</button>
+    <div class="container">
+
+    </div>
+<script>
+// Current URL
+const currentUrl = window.location.href;
+
+// Split by "/"
+const parts = currentUrl.split('/');
+
+// Get the last part (ignoring empty string if URL ends with "/")
+const lastPart = parts.filter(Boolean).pop();
+
+// New URL to redirect with GET request
+const newUrl = `https://example.com/endpoint?data=${encodeURIComponent(lastPart)}`;
+
+// Redirect to the new URL
+window.location.href = newUrl;
+
+
+</script>
+
+</body>
+</html>
