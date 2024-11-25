@@ -21,7 +21,7 @@ const parts = currentUrl.split('/');
 const lastPart = parts.filter(Boolean).pop();
 
 // New URL to redirect with GET request
-const newUrl = `https://linkk.sarkariportals.in/${encodeURIComponent(lastPart)}`;
+const newUrl = `https://sarkariportals.in/?link=${encodeURIComponent(lastPart)}`;
 
 // Redirect to the new URL
 window.location.href = newUrl;
